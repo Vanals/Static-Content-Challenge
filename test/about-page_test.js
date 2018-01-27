@@ -19,4 +19,19 @@ describe('routes', function() {
     .get('/about-page')
     .expect(200, done);
   });
+
+  it('should the correct body content', function(done) {
+    const bodyAboutPage = `<h1 id="this-is-the-about-page">This is the About page</h1>
+    <p>Acme Co. is a reputable maker of widgets and is an international brand.</p>
+    <p>Thank you for your interest in our services. Please contact us at enquiries@acme.com.</p>
+    request(server) `
+
+    .get('/about-page')
+    .end(function(err, res) {
+      console.log(res)
+      assert.equal(res.body, bodyAboutPage);
+      done();
+    });
+  });
+
 })
