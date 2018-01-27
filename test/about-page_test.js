@@ -21,15 +21,23 @@ describe('routes', function() {
   });
 
   it('should the correct body content', function(done) {
-    const bodyAboutPage = `<h1 id="this-is-the-about-page">This is the About page</h1>
-    <p>Acme Co. is a reputable maker of widgets and is an international brand.</p>
-    <p>Thank you for your interest in our services. Please contact us at enquiries@acme.com.</p>
-    request(server) `
+    const bodyAboutPage = "<!doctype html>\n" +
+    "<html>\n" +
+    '    <head>\n' +
+    '        <title>Welcome to Acme</title>\n' +
+    '    </head>\n' +
+    '    <body>\n' +
+    '      <h1 id="this-is-the-about-page">This is the About page</h1>\n' +
+    '      <p>Acme Co. is a reputable maker of widgets and is an international brand.</p>\n' +
+    '      <p>Thank you for your interest in our services. Please contact us at enquiries@acme.com.</p>\n' +
+    '    </body>\n' +
+    '</html>\n'
 
+    request(server)
     .get('/about-page')
     .end(function(err, res) {
-      console.log(res)
-      assert.equal(res.body, bodyAboutPage);
+      console.log(res.text)
+      assert.equal(res.text, bodyAboutPage);
       done();
     });
   });
