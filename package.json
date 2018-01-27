@@ -19,5 +19,8 @@
   "homepage": "https://github.com/Vanals/Static-Content-Challenge#readme",
   "dependencies": {
     "express": "^4.16.2"
+  },
+  "devDependencies": {
+    "supertest": "^3.0.0"
   }
 }
