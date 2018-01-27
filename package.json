@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/Vanals/Static-Content-Challenge/issues"
   },
-  "homepage": "https://github.com/Vanals/Static-Content-Challenge#readme"
+  "homepage": "https://github.com/Vanals/Static-Content-Challenge#readme",
+  "dependencies": {
+    "express": "^4.16.2"
+  }
 }
