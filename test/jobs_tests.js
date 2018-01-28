@@ -20,4 +20,27 @@ describe('routes', function() {
     .expect(200, done);
   });
 
+  it('should the correct body content', function(done) {
+    //Is better write all the html code or test the presence of the correct body looking
+    //for one of the tags by ID ?
+    const bodyJobs = "<!doctype html>\n" +
+    "<html>\n" +
+    "    <head>\n" +
+    "        <title>Welcome to Acme</title>\n" +
+    "    </head>\n" +
+    "    <body>\n" +
+    "      <h1 id=\"jobs-at-acme-co-\">Jobs at Acme Co.</h1>\n" +
+    "      <p>Acme Co. is often seeking candidates in the areas of marketing, finance, customer support and sales. If you are an enthusiastic go-getter, you don&#39;t need to look any further for your next step up the corporate career ladder.</p>\n" +
+    "      <p>Send us an email at careers@acme.com for more information.</p>\n" +
+    "    </body>\n" +
+    "</html>" +
+
+    request(server)
+    .get('/jobs')
+    .end(function(err, res) {
+      assert.equal(res.text, bodyJobs);
+      done();
+    });
+  });
+
 })
