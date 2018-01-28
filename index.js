@@ -6,7 +6,7 @@ app.get('/about-page', function(req, res) {
 })
 
 app.get('/jobs', function(req, res) {
-  res.send('Jobs route');
+  res.sendFile('index.html', { root: __dirname  + '/content/jobs' });
 })
 
 app.use(function(req, res, next) {
