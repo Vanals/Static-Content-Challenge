@@ -9,6 +9,10 @@ app.get('/jobs', function(req, res) {
   res.sendFile('index.html', { root: __dirname  + '/content/jobs' });
 })
 
+app.get('/valves', function(req, res) {
+  res.send('Valves')
+})
+
 app.use(function(req, res, next) {
     res.status(404).send('Error 404 - This route doesn\'t exist');
 });
