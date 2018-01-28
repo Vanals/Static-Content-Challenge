@@ -57,4 +57,4 @@ http://localhost:5000/
 | ------------- |
 | Server: Express|
 | Testing: Mocha, @types/mocha and Supertest |
-| To Convert md content in html: Gulp + Gulp-markdown|
+| To convert md content to html: Gulp + Gulp-markdown|
