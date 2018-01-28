@@ -20,4 +20,23 @@ describe('routes', function() {
     .expect(200, done);
   });
 
+  it('should return the correct body content', function(done) {
+    const bodyValves = "<!doctype html>\n" +
+    "<html>\n" +
+        "<head>\n" +
+            "<title>Welcome to Acme</title>\n" +
+        "</head>\n" +
+        "<body>\n" +
+          "<h1>Valves</h1>\n" +
+          "<p>Acme Co. valves are amongst the highest quality in the industry. Whether it&#39;s for industrial, commercial, medical or space exploration, you can always count on an Acme Co. valve.</p>\n" +
+        "</body>" +
+    "</html>\n"
+
+    request(server)
+    .get('/valves')
+    .end(function(err, res) {
+      assert.equal(res.text, bodyValves);
+      done();
+    });
+  });  
 })

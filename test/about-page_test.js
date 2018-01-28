@@ -20,7 +20,7 @@ describe('routes', function() {
     .expect(200, done);
   });
 
-  it('should the correct body content', function(done) {
+  it('should return the correct body content', function(done) {
     const bodyAboutPage = "<!doctype html>\n" +
     "<html>\n" +
     '    <head>\n' +

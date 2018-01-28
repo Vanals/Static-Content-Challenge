@@ -20,7 +20,7 @@ describe('routes', function() {
     .expect(200, done);
   });
 
-  it('should the correct body content', function(done) {
+  it('should return the correct body content', function(done) {
     //Is better write all the html code or test the presence of the correct body looking
     //for one of the tags by ID ?
     const bodyJobs = "<!doctype html>\n" +
