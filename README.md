@@ -16,7 +16,7 @@ The application should be shipped with three tests:
 
 Your application may make use of open-source code libraries. It is entirely up to you how the application performs the challenge.
 ```
-![](https://image.ibb.co/hAOQOb/Screen_Shot_2018_01_28_at_12_16_15.png)
+<kbd>![](https://image.ibb.co/hAOQOb/Screen_Shot_2018_01_28_at_12_16_15.png)</kbd>
 
 ## How to use
 1) Clone the project
