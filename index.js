@@ -14,7 +14,7 @@ app.get('/valves', function(req, res) {
 })
 
 app.use(function(req, res, next) {
-    res.status(404).send('Error 404 - This route doesn\'t exist');
+    res.status(404).send('Error 404 - This route doesn\'t exist. Try /about-page, /jobs and /valves');
 });
 
 var server = app.listen(5000, function() {
