@@ -36,7 +36,6 @@ describe('routes', function() {
     request(server)
     .get('/about-page')
     .end(function(err, res) {
-      console.log(res.text)
       assert.equal(res.text, bodyAboutPage);
       done();
     });
