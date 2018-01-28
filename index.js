@@ -10,7 +10,7 @@ app.get('/jobs', function(req, res) {
 })
 
 app.get('/valves', function(req, res) {
-  res.send('Valves')
+  res.sendFile('index.html', { root: __dirname  + '/content/valves' });
 })
 
 app.use(function(req, res, next) {
