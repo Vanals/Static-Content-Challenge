@@ -27,7 +27,7 @@ describe('routes', function() {
     '        <title>Welcome to Acme</title>\n' +
     '    </head>\n' +
     '    <body>\n' +
-    '      <h1 id="this-is-the-about-page">This is the About page</h1>\n' +
+    '      <h1>This is the About page</h1>\n' +
     '      <p>Acme Co. is a reputable maker of widgets and is an international brand.</p>\n' +
     '      <p>Thank you for your interest in our services. Please contact us at enquiries@acme.com.</p>\n' +
     '    </body>\n' +
